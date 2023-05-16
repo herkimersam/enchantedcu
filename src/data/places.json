@@ -1,0 +1,8 @@
+[
+  {"place":"Morrow Plots","image":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/UIUC_morrow_plot.JPG/375px-UIUC_morrow_plot.JPG", "energy":"Generation" , "latitude":40.104722,"longitude":-88.22611},
+  {"place":"Orpheum Theater", "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Orpheum_3.jpg/375px-Orpheum_3.jpg", "energy":"Revival", "latitude":40.119466,"longitude":-88.242448},
+  {"place":"Virginia Theater", "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Virginia_Theater_Champaign_Illinois_4142.jpg/450px-Virginia_Theater_Champaign_Illinois_4142.jpg", "energy":"Renoun", "latitude":40.1168225,"longitude":-88.244292},
+  {"place":"Cattle Bank", "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Cattle_Bank_%28Champaign_County_Historical_Museum%29_-_2.jpg/450px-Cattle_Bank_%28Champaign_County_Historical_Museum%29_-_2.jpg", "energy":"Movement", "latitude":40.116421,"longitude":-88.243385},
+  {"place":"Crestview Park", "image":"https://www.urbanaparks.org/assets/1/6/Crestview-Park-Gardens-2.jpg", "energy":"Portal", "latitude":40.0964,"longitude":-88.1941} 
+
+]

@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Grid from "@mui/material/Grid";
-import { NavBar, Footer } from '../../components';
+import { NavBar, Footer } from "../../components";
 import { colors } from "../../config/index";
 import { Gutter } from "../../styled_components";
+import logo from "../../sparkle.svg";
 
 const HomePage = styled.div`
   h1 {
@@ -16,11 +17,11 @@ const HomePage = styled.div`
     width: 80vw;
     max-width: 940px;
     margin: 0 0 40px 0;
-    @media (max-width:1024px) {
-      font-size:3rem;
+    @media (max-width: 1024px) {
+      font-size: 3rem;
     }
-    @media (max-width:768px){
-      font-size:2rem;
+    @media (max-width: 768px) {
+      font-size: 2rem;
     }
   }
   .h1,
@@ -66,10 +67,10 @@ const HomePage = styled.div`
     }
   }
   .logoScrollText {
-    font-size:2rem;
-    color:black;
-    font-family:"Lora", serif;
-    padding-bottom:2rem;
+    font-size: 2rem;
+    color: black;
+    font-family: "Lora", serif;
+    padding-bottom: 2rem;
   }
 `;
 
@@ -142,6 +143,50 @@ const Enchanted = styled.div`
   }
 `;
 
+const CentralFeature = styled.div`
+  padding: 2em 0;
+  margin: 1em 0;
+  h2 {
+    color: ${colors.darkgray};
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Lora", serif;
+    margin: 0 0 0.5rem 0.5rem;
+    padding: 0;
+  }
+  p {
+    color: ${colors.light};
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    line-height: 1.1;
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+    font-size: 1rem;
+    max-width: 95%;
+  }
+  a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background: ${colors.forest};
+    color: white;
+    border-radius: 0.3rem;
+    margin: 0.5rem 1rem 0 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 5px 5px 20px ${colors.forest}55;
+    transition: 250ms all;
+    @media (max-width: 900px) {
+      margin: 1rem auto 2rem auto;
+      text-align: center;
+    }
+    &:hover {
+      background: ${colors.fuschia};
+      box-shadow: 5px 10px 20px ${colors.forest}88;
+    }
+  }
+`;
+
 const ThreeUpGrid = styled(Grid)`
   padding: 2em 0;
   margin: 1em 0;
@@ -181,9 +226,9 @@ const ThreeUpGrid = styled(Grid)`
     display: table;
     box-shadow: 5px 5px 20px ${colors.forest}55;
     transition: 250ms all;
-    @media (max-width: 900px){
-      margin:1rem auto 2rem auto;
-      text-align:center;
+    @media (max-width: 900px) {
+      margin: 1rem auto 2rem auto;
+      text-align: center;
     }
     &:hover {
       background: ${colors.fuschia};
@@ -192,38 +237,62 @@ const ThreeUpGrid = styled(Grid)`
   }
 `;
 
-
-
 export default function Home() {
-  
   return (
     <HomePage>
       <NavBar />
       <HomePageContent>
         <Enchanted>
-          <h1>Explore <i>enchanted</i> Champaign-Urbana.</h1>
+          <h1>
+            <i>Enchanted</i> Champaign-Urbana.
+          </h1>
           <p>
-           Have you ever entered Crystal Lake Park and felt like you crossed a Threshold
-           into a meaningfully different place? Or encountered a building that seems much older than its neighbors?
-           This map can be a vehicle for perceiving and imagining some spaces in an enchanted way.
+            Have you ever entered Crystal Lake Park and felt like you crossed a
+            Threshold into a meaningfully different place? Or encountered a
+            building that seems much older than its neighbors? This map can be a
+            vehicle for perceiving and imagining some spaces in an enchanted
+            way.
           </p>
+          <CentralFeature>
+            <img
+              className="photo"
+              src={logo}
+              alt="large sparkle"
+              loading="lazy"
+            />
 
+            <h2>Enchanted Champaign-Urbana</h2>
+
+            <Link to="/map">
+              Explore <i>Enchanted</i> Champaign-Urbana
+            </Link>
+          </CentralFeature>
+
+          <p>Or explore other maps of the area...</p>
           <ThreeUpGrid container spacing={0}>
             <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
               <Grid container spacing={0} alignItems="center">
                 <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                   <img
                     className="photo"
-                    src={"https://www.urbanaparks.org/assets/1/6/675674fd979441a3a3e17dbbffdbcb061.png"}
+                    src={
+                      "https://www.urbanaparks.org/assets/1/6/675674fd979441a3a3e17dbbffdbcb061.png"
+                    }
                     alt="Urbana Park District Leaf Logo"
                     loading="lazy"
                   />
                 </Grid>
                 <Grid item xs={9} sm={9} md={9} lg={9} xl={9}>
-                  <h2>Urabana <br /> Parks</h2>
+                  <h2>
+                    Urabana
+                    <br />
+                    Parks
+                  </h2>
                 </Grid>
               </Grid>
-              <Link to="https://www.urbanaparks.org/parks/">Explore Urbana's Parks</Link>
+              <Link to="https://www.urbanaparks.org/assets/1/6/UPD-map-chart.pdf">
+                Explore Urbana's Parks
+              </Link>
             </Grid>
 
             <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
@@ -231,16 +300,23 @@ export default function Home() {
                 <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                   <img
                     className="photo"
-                    src={"https://marketing.illinois.edu/wp-content/uploads/2021/09/block-I-primary.png"}
-                    alt="Corn plants with domed building in background"
+                    src={
+                      "https://marketing.illinois.edu/wp-content/uploads/2021/09/block-I-primary.png"
+                    }
+                    alt="block I"
                     loading="lazy"
                   />
                 </Grid>
                 <Grid item xs={9} sm={9} md={9} lg={9} xl={9}>
-                  <h2>UIUC Campus <br /> Landmarks</h2>
+                  <h2>
+                    UIUC Campus <br />
+                    Area
+                  </h2>
                 </Grid>
               </Grid>
-              <Link to="https://illinois.edu/about/landmarks.html">Explore Landmarks on Campus</Link>
+              <Link to="https://goo.gl/maps/BETUXtqjQQ7gTs7w5">
+                Explore Campus
+              </Link>
             </Grid>
 
             <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
@@ -248,7 +324,9 @@ export default function Home() {
                 <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                   <img
                     className="photo"
-                    src={"https://champaignparks.com/wp-content/uploads/2016/11/CPDLogo-4C-01.png"}
+                    src={
+                      "https://champaignparks.com/wp-content/uploads/2016/11/CPDLogo-4C-01.png"
+                    }
                     alt="Champaign Park District pinetree logo"
                     loading="lazy"
                   />
@@ -260,7 +338,9 @@ export default function Home() {
                   </h2>
                 </Grid>
               </Grid>
-              <Link to="https://champaignparks.com/find-a-park/">Explore Champaign's Parks</Link>
+              <Link to="https://champaignparks.com/parks-facilities/">
+                Explore Champaign's Parks
+              </Link>
             </Grid>
           </ThreeUpGrid>
         </Enchanted>
