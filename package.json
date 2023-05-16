@@ -2,6 +2,11 @@
   "name": "enchantedcu",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herkimersam/enchantedcu.git"
+  },
+  "homepage": "http://enchantedcu.web.illinois.edu",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
