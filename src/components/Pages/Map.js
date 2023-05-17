@@ -6,6 +6,9 @@ import { Map as LayeredMap, Marker, Popup } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Pin from "../Map/pin";
 import PLACES from "../../data/places.json";
+import mapboxgl from "mapbox-gl";
+mapboxgl.workerClass =
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default; // eslint-disable-line import/no-webpack-loader-syntax
 
 const MapPage = styled.div`
   background: white;
