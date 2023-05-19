@@ -52,15 +52,11 @@ export default function EnchantedMap() {
       <ContentContainer>
         <h1>Map</h1>
         <hr />
-        <div className="sidebar">
-          Longitude: {viewState.longitude} | Latitude: {viewState.latitude} |
-          Zoom: {viewState.zoom}
-        </div>
         <LayeredMap
           {...viewState}
           onMove={(evt) => setViewState(evt.viewState)}
           style={{ height: 600 }}
-          mapStyle="mapbox://styles/mapbox/streets-v12"
+          mapStyle="mapbox://styles/mapbox/dark-v9"
           mapboxAccessToken={MAPBOX_TOKEN}
         >
           {pins}
@@ -72,7 +68,7 @@ export default function EnchantedMap() {
               onClose={() => setPopupInfo(null)}
             >
               <div>
-                {popupInfo.place} | energy: {popupInfo.energy}{" "}
+                {popupInfo.place} | Energy: {popupInfo.energy}{" "}
               </div>
               <img width="100%" src={popupInfo.image} alt={popupInfo.place} />
             </Popup>
