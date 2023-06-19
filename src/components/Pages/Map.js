@@ -5,8 +5,9 @@ import { NavBar, Footer } from "../../components";
 import { Map as LayeredMap, Marker, Popup } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Pin from "../Map/pin";
-import PLACES from "../../data/places.json";
+import placeFeatures from "../../data/places.geojson.json";
 import mapboxgl from "mapbox-gl";
+
 mapboxgl.workerClass =
   require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default; // eslint-disable-line import/no-webpack-loader-syntax
 
@@ -15,6 +16,16 @@ const MapPage = styled.div`
 `;
 
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
+
+const places = placeFeatures["features"].map((feature) => {
+  return {
+    name: feature.properties.name,
+    image: feature.properties.image,
+    latitude: feature.geometry.coordinates[1],
+    longitude: feature.geometry.coordinates[0],
+    lore: feature.properties.lore,
+  };
+});
 
 export default function EnchantedMap() {
   const [popupInfo, setPopupInfo] = useState(null);
@@ -27,7 +38,7 @@ export default function EnchantedMap() {
 
   const pins = useMemo(
     () =>
-      PLACES.map((place, index) => (
+      places.map((place, index) => (
         <Marker
           key={`marker-${index}`}
           longitude={place.longitude}
@@ -45,7 +56,6 @@ export default function EnchantedMap() {
       )),
     []
   );
-
   return (
     <MapPage>
       <NavBar />
@@ -68,9 +78,11 @@ export default function EnchantedMap() {
               onClose={() => setPopupInfo(null)}
             >
               <div>
-                {popupInfo.place} | Energy: {popupInfo.energy}{" "}
+                {popupInfo.name}
+                <hr />
+                {popupInfo.lore}
               </div>
-              <img width="100%" src={popupInfo.image} alt={popupInfo.place} />
+              <img width="100%" src={popupInfo.image} alt={popupInfo.name} />
             </Popup>
           )}
         </LayeredMap>

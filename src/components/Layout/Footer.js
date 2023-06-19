@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 // import { NavLink } from 'react-router-dom';
 import Grid from "@mui/material/Grid";
+import { Link } from "react-router-dom";
 import { colors } from "../../config";
 
 const FooterContainer = styled.footer`
@@ -21,7 +22,7 @@ const FooterContainer = styled.footer`
     line-height: normal;
     letter-spacing: normal;
     color: ${colors.black};
-    text-align:left;
+    text-align: left;
   }
   a {
     text-decoration: none;
@@ -49,8 +50,8 @@ const FooterContainer = styled.footer`
   }
   hr {
     margin: 20px 0;
-    color:white;
-    border-bottom:1px solid white;
+    color: white;
+    border-bottom: 1px solid white;
   }
   h6 {
     color: white;
@@ -67,9 +68,10 @@ const FooterContent = styled.div`
   max-width: 1140px;
   margin: 0 auto;
   padding: 2rem 0;
-  a, a img {
+  a,
+  a img {
     display: inline-block;
-    width:90%;
+    width: 90%;
   }
 `;
 
@@ -100,11 +102,42 @@ const Footer = (props) => {
       <FooterContent>
         <LinkLists container spacing={0}>
           <Grid item xs={12}>
-            <p className="copyright">
-              Copyright Colleen Falllaw
-              <br />
-              Website Licensed GPL, Data Licensed CC NC Attribution
-            </p>
+            <h6>Enchannted Champaign-Urbana</h6>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Grid container spacing={0}>
+              <Grid item xs={6}>
+                <ul>
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/map">Map</Link>
+                  </li>
+                </ul>
+              </Grid>
+              <Grid item xs={6}>
+                <ul>
+                  <li>
+                    <Link to="/data">Data</Link>
+                  </li>
+                  <li>
+                    <Link to="/about">About</Link>
+                  </li>
+                </ul>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid item xs={12} md={6} alignContent="center" alignItems="center">
+            <Grid container spacing={0}>
+              <Grid item xs={12}>
+                <p className="copyright">
+                  Copyright Colleen Falllaw
+                  <br />
+                  Website Licensed GPL, Data Licensed CC NC Attribution
+                </p>
+              </Grid>
+            </Grid>
           </Grid>
         </LinkLists>
       </FooterContent>

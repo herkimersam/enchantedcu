@@ -1,8 +1,10 @@
 import React from "react";
+import { CSVLink } from "react-csv";
 import styled from "styled-components";
 import { ContentContainer, Gutter } from "../../styled_components";
 import { NavBar, Footer } from "../../components";
 import { colors } from "../../config";
+import placeFeatures from "../../data/places.geojson.json";
 
 const DataPage = styled.div`
   background: white;
@@ -56,6 +58,30 @@ const Enchanted = styled.div`
   }
 `;
 
+const places = placeFeatures["features"].map((feature) => {
+  return {
+    name: feature.properties.name,
+    image: feature.properties.image,
+    latitude: feature.geometry.coordinates[1],
+    longitude: feature.geometry.coordinates[0],
+    lore: feature.properties.lore,
+  };
+});
+
+const headers = [
+  { label: "Name", key: "name" },
+  { label: "Image", key: "image" },
+  { label: "Latitude", key: "latitude" },
+  { label: "Longitude", key: "longitude" },
+  { label: "Lore", key: "lore" },
+];
+
+const csvReport = {
+  data: places,
+  headers: headers,
+  filename: "places.csv",
+};
+
 export default function Data() {
   return (
     <DataPage>
@@ -64,22 +90,25 @@ export default function Data() {
         <h1>Data</h1> <hr />
         <Gutter h={10} />
         <p>
-          <i>Enchanted CU</i> uses custom crafted data. Read more on our{" "}
-          <a href="/About">About</a> page.
-          <br />
+          <i>Enchanted CU</i> uses custom crafted data. The stories were
+          contributed by David Abzug, the photos are public domain, and the
+          coordinates are from Google maps.
           <br />
           Download the latest version of our data here:
           <br />
         </p>
         <Enchanted>
-          <h2> Current Data Release (2023-05-16)</h2>
+          <h2> Current Data Release (2023-06-18)</h2>
           <a
-            href={`${process.env.PUBLIC_URL}/data/places.json`}
+            href={`${process.env.PUBLIC_URL}/data/places.geojson`}
             id="button-search"
             download
           >
-            JSON
+            GeoJSON
           </a>
+          <CSVLink {...csvReport} id="button-search">
+            CSV / Excel
+          </CSVLink>
           <p className="license-description">
             This data is licensed under a{" "}
             <a

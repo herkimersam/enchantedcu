@@ -18,13 +18,13 @@ export default function About() {
         <p>
           Enchanted CU is a technology exploration project to develop and
           demonstrate familiarity with <a href="https://react.dev/">React.js</a>
-          , <a href="https://www.mapbox.com/">Mapbox</a>, and Geographic
-          Information Systems.
+          , <a href="https://www.mapbox.com/">Mapbox</a>, GeoJSON, and
+          Geographic Information Systems.
         </p>
 
         <p>
-          This project is brought to you by the <b>Colleen Fallaw</b>, adapting
-          code from the
+          This project is brought to you by <b>Colleen Fallaw</b>, adapting
+          stories from David Abzug and adapting code from the
           <a href="https://github.com/GeoDaCenter/chicago-environment-explorer">
             <i>ChiVes</i>
           </a>{" "}

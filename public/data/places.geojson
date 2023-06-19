@@ -1,0 +1,125 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+        {
+      "type": "Feature",
+      "properties": {
+        "name": "UIUC Undergraduate Library",
+        "image": "https://www.library.illinois.edu/wp-content/uploads/2021/10/west_ugl_entrance-scaled.jpg",
+        "lore": "The undergraduate library sits at an intersection of ley lines and was intentionally built underground in order to take advantage of the magical energy said ley lines provide. The U of I actually binds magic into books from their press and sells them to other schools so said schools can drain them of energy and conduct magical research. One unexpected side effect of this is that the undergraduate library has gained sentience and is currently in contract negotiation with the school."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.22752912879385,
+          40.104827910568865
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Orpheum Theater",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Orpheum_3.jpg/375px-Orpheum_3.jpg",
+        "lore": "In the late 1800s Melissa Fridman performed multiple experiments attempting to create golems. To power her attempts she constructed a magic funnel, designed to gather ambient magical energy and channel it into a small area. While her experiments never succeeded, her funnel still exists to this day. It sits over the Orpheum Children's Museum. As a result, children who spend large amounts of time at the museum have a much greater chance to develop an affinity for magic."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.24223177103957,
+          40.11951011567718
+        ]
+      }
+    },
+        {
+      "type": "Feature",
+      "properties": {
+        "name": "Japan House",
+        "image": "https://en.wikipedia.org/wiki/Japan_House#/media/File:JHphoto2.jpg",
+        "lore": "The Japan House dry garden houses a captured earth elemental whose power has been tapped to maintain the fertility of the ground there."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.21784123555116,
+          40.09275692816728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Virginia Theater",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Virginia_Theater_Champaign_Illinois_4142.jpg/450px-Virginia_Theater_Champaign_Illinois_4142.jpg",
+        "lore": "The Virginia Theater is haunted by the ghost of Roger Ebert. The genial soul can often be seen wandering the aisles late at night. Movies will occasionally play without warning in the theater and anyone who talks too much during a showing finds their throat strangely constricted."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.24543482671757,
+          40.11719733993482
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cattle Bank",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Cattle_Bank_%28Champaign_County_Historical_Museum%29_-_2.jpg/450px-Cattle_Bank_%28Champaign_County_Historical_Museum%29_-_2.jpg",
+        "lore": "The cornerstone of The Cattle Bank holds within it two of the first Peacemaker revolvers ever constructed back in 1835. The Cattle Bank has never been robbed. All those who ever tried were shot by an invisible gunman. Also, if you leave out a bottle of whisky and some cinnamon cakes they're always gone the next day."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.23860110046186,
+          40.11646666161747
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wendell Sculpture Garden",
+        "image": "https://www.urbanaparks.org/assets/1/6/Crestview-Park-Gardens-2.jpg",
+        "lore": "Each of the sculptures in the Wendell Sculpture garden actually acts as a portal to another dimension. A different dimension for each sculpture. As such, Meadowbook Park is a transportation hub for dimensional travelers."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.20871348680308,
+          40.08051624392567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Boneyard Creek",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Boneyard_Creek_Second_Street_Basin_Stone_Arch_Bridge_Champaign_Illinois.jpg",
+        "lore": "The Boneyard Creek Second Street Basin is home to a family of Nixies. They donated the money to turn the basin into a park because they wanted to remodel."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.23750013354021,
+          40.113763926838715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mount Hope Cemetary",
+        "image": "https://images.squarespace-cdn.com/content/v1/5e6fc3494ca06722902f0f6d/1584384007220-HIVDFX701T3XYRG6DMKO/mt%2Bhope%2Brotary.jpg?format=500w",
+        "lore": "Mt Hope Cemetery is one of Persephone's summer homes as it reminds her of Hades. If you ever see a woman wandering the cemetery alone between the vernal and autumnal equinox it may be her. If you ask politely, and the task is interesting enough, she may assist you."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.22809227794939,
+          40.09933801261604
+        ]
+      }
+    }
+  ]
+}
