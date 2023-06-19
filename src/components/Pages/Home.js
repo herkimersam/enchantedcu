@@ -4,7 +4,6 @@ import styled from "styled-components";
 import Grid from "@mui/material/Grid";
 import { NavBar, Footer } from "../../components";
 import { colors } from "../../config/index";
-import { Gutter } from "../../styled_components";
 import logo from "../../sparkle.svg";
 
 const HomePage = styled.div`
@@ -241,7 +240,7 @@ export default function Home() {
   return (
     <HomePage>
       <NavBar />
-      <HomePageContent>
+      <HomePageContent className="notFooter">
         <Enchanted>
           <h1>
             <i>Enchanted</i> Champaign-Urbana.
@@ -345,7 +344,6 @@ export default function Home() {
           </ThreeUpGrid>
         </Enchanted>
       </HomePageContent>
-      <Gutter h={60} />
       <Footer />
     </HomePage>
   );

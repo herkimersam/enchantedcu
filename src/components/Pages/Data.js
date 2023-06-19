@@ -86,7 +86,7 @@ export default function Data() {
   return (
     <DataPage>
       <NavBar />
-      <ContentContainer>
+      <ContentContainer className="notFooter">
         <h1>Data</h1> <hr />
         <Gutter h={10} />
         <p>

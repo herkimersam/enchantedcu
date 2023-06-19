@@ -9,8 +9,6 @@ import {
   Data,
 } from "./components/";
 
-import "./App.css";
-
 function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
