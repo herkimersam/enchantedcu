@@ -102,7 +102,7 @@ const Footer = (props) => {
       <FooterContent>
         <LinkLists container spacing={0}>
           <Grid item xs={12}>
-            <h6>Enchannted Champaign-Urbana</h6>
+            <h6>Enchanted Champaign-Urbana</h6>
           </Grid>
           <Grid item xs={12} md={6}>
             <Grid container spacing={0}>
